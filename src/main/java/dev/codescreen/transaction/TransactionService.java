@@ -52,7 +52,7 @@ public class TransactionService {
                 transactionResponse.getBalance().setAmount(Double.toString(netBalance));
             }
             return ResponseEntity.status(HttpStatus.CREATED).body(transactionResponse);
-            
+
         }catch (Exception e){
             ErrorResponse errorResponse = new ErrorResponse(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR.toString());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
