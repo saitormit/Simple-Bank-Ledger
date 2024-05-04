@@ -1,5 +1,8 @@
 package dev.codescreen.transaction;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TransactionAmount {
     public String amount;
     public String currency;
