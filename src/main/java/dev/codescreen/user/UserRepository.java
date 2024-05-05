@@ -1,5 +1,6 @@
 package dev.codescreen.user;
 
+import dev.codescreen.exception.UserNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class UserRepository {
                 return user;
             }
         }
-        return null;
+        throw new UserNotFoundException("User not found with ID: " + id);
     }
 
 }

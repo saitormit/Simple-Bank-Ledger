@@ -2,6 +2,7 @@ package dev.codescreen.transaction;
 
 import dev.codescreen.event.*;
 import dev.codescreen.user.User;
+import dev.codescreen.exception.UserNotFoundException;
 import dev.codescreen.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,12 +39,6 @@ public class TransactionService {
         try {
             User user = userRepository.findUserById(transactionRequest.getUserId());
             DebitOrCredit debitOrCredit = transactionRequest.getTransactionAmount().getDebitOrCredit();
-
-            //Check if the assigned user is present in the memory
-            if(user == null){
-                ErrorResponse errorResponse = new ErrorResponse("User not found", HttpStatus.BAD_REQUEST.toString());
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
-            }
 
             //Check if there's ambiguity in the transaction type
             if((transactionType.equals("load") && debitOrCredit.equals(DebitOrCredit.DEBIT)) ||
@@ -96,6 +91,8 @@ public class TransactionService {
             //Process the addition of funds to the user's balance
             else if (transactionType.equals("load")) {
                 transactionResponse.getBalance().setDebitOrCredit(DebitOrCredit.CREDIT);
+                transactionResponse.setResponseCode(ResponseCode.APPROVED);
+
                 double netBalance = user.getBalance() + Double.parseDouble(transactionRequest.getTransactionAmount().getAmount());
                 user.setBalance(netBalance);
                 transactionResponse.getBalance().setAmount(Double.toString(netBalance));
@@ -112,9 +109,22 @@ public class TransactionService {
             ErrorResponse errorResponse = new ErrorResponse("Bad request", HttpStatus.BAD_REQUEST.toString());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
 
+        }catch (UserNotFoundException e){
+            ErrorResponse errorResponse = new ErrorResponse(e.getMessage(), HttpStatus.NOT_FOUND.toString());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
         }catch (Exception e){
             ErrorResponse errorResponse = new ErrorResponse(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR.toString());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
+        }
+    }
+
+    //Method to get the user information with exception handling
+    public ResponseEntity<Object> searchForUser(Long id){
+        try {
+            return ResponseEntity.ok(userRepository.findUserById(Long.toString(id)));
+        }catch (UserNotFoundException e){
+            ErrorResponse errorResponse = new ErrorResponse(e.getMessage(), HttpStatus.NOT_FOUND.toString());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
         }
     }
 }

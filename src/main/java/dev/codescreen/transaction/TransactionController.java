@@ -26,18 +26,6 @@ public class TransactionController {
         this.eventRepository = eventRepository;
     }
 
-    //Gets all the registered users and their information
-    @GetMapping
-    public List<User> showUsers(){
-        return userRepository.getAllUsers();
-    }
-
-    //Gets the history of all approved and declined transactions from all users
-    @GetMapping("/events")
-    public Map<String, List<Event>> getEventRecord(){
-        return eventRepository.getEventRepository();
-    }
-
     //Tests the availability of the service and returns the current server time
     @GetMapping("/ping")
     public ResponseEntity<Object> pingServer(){
@@ -54,5 +42,23 @@ public class TransactionController {
     @PutMapping("/load")
     public ResponseEntity<Object> loadFunds(@RequestBody TransactionRequest transactionRequest){
         return transactionService.modifyFunds(transactionRequest, "load");
+    }
+
+    //Gets all the registered users and their information
+    @GetMapping
+    public List<User> showUsers(){
+        return userRepository.getAllUsers();
+    }
+
+    //Get user by ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Object> getUserById(@PathVariable Long id){
+        return transactionService.searchForUser(id);
+    }
+
+    //Gets the history of all approved and declined transactions from all users
+    @GetMapping("/events")
+    public Map<String, List<Event>> getEventRecord(){
+        return eventRepository.getEventRepository();
     }
 }
