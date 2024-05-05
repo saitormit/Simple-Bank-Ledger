@@ -1,4 +1,4 @@
-package dev.codescreen.transaction;
+package dev.codescreen.model;
 
 //Default error response schema when exception is found on the transaction service
 public class ErrorResponse {

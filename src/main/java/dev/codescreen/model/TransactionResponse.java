@@ -1,4 +1,4 @@
-package dev.codescreen.transaction;
+package dev.codescreen.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

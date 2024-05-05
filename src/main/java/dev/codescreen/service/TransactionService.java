@@ -1,9 +1,10 @@
-package dev.codescreen.transaction;
+package dev.codescreen.service;
 
-import dev.codescreen.event.*;
-import dev.codescreen.user.User;
+import dev.codescreen.model.*;
+import dev.codescreen.model.User;
 import dev.codescreen.exception.UserNotFoundException;
-import dev.codescreen.user.UserRepository;
+import dev.codescreen.repository.EventRepository;
+import dev.codescreen.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

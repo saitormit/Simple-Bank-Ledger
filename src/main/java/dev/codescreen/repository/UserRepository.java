@@ -1,6 +1,7 @@
-package dev.codescreen.user;
+package dev.codescreen.repository;
 
 import dev.codescreen.exception.UserNotFoundException;
+import dev.codescreen.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

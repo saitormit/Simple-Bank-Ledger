@@ -1,4 +1,4 @@
-package dev.codescreen.transaction;
+package dev.codescreen.model;
 
 //Schema to confirm the connection with the server by returning its current time
 public class PingRecord {

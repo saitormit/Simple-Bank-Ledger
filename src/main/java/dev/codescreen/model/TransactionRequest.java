@@ -1,4 +1,4 @@
-package dev.codescreen.transaction;
+package dev.codescreen.model;
 
 //This class' purpose is to parse the body of PUT requests
 public class TransactionRequest {

@@ -1,4 +1,4 @@
-package dev.codescreen.user;
+package dev.codescreen.model;
 
 //Definition of the user class
 public class User {

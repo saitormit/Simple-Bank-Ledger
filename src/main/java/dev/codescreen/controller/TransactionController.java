@@ -1,9 +1,11 @@
-package dev.codescreen.transaction;
+package dev.codescreen.controller;
 
-import dev.codescreen.event.Event;
-import dev.codescreen.event.EventRepository;
-import dev.codescreen.user.User;
-import dev.codescreen.user.UserRepository;
+import dev.codescreen.model.Event;
+import dev.codescreen.repository.EventRepository;
+import dev.codescreen.model.TransactionRequest;
+import dev.codescreen.service.TransactionService;
+import dev.codescreen.model.User;
+import dev.codescreen.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

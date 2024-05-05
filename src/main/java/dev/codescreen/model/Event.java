@@ -1,4 +1,4 @@
-package dev.codescreen.event;
+package dev.codescreen.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

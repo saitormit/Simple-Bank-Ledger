@@ -1,5 +1,6 @@
-package dev.codescreen.event;
+package dev.codescreen.repository;
 
+import dev.codescreen.model.Event;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

@@ -1,8 +1,6 @@
-package dev.codescreen.event;
+package dev.codescreen.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import dev.codescreen.transaction.ResponseCode;
-import dev.codescreen.transaction.TransactionAmount;
 
 //Event when the user has its balance loaded
 public class LoadEvent extends Event{
