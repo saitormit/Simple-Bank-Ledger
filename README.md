@@ -43,7 +43,24 @@ Here’s a breakdown of the key criteria we’ll be considering when grading you
 
 # Candidate README
 ## Bootstrap instructions
-*Replace this: To run this server locally, do the following:*
+This bank ledger system was developed by relying on Spring Boot framework. As a prerequisite to set up and install this application on the machine, *Java Development Kit (JDK) 8+* version is needed. In addition, we are also assuming whoever is cloning this program have Git and Maven already installed.
+
+In order to get the bank ledger Spring Boot application up and running, follow the next steps:
+
+#### 1. Clone the repository
+``git clone https://github.com/codescreen/CodeScreen_q8psexpb.git``
+
+#### 2. Navigate to Project Directory (CodeScreen_q8psexpb)
+``cd CodeScreen_q8psexpb``
+
+#### 3. Build the Application using Maven
+``mvn clean package``
+
+#### 4. Run the Application
+``mvn spring-boot:run``
+
+#### 5. Access the Application
+As the service is supposed to run on a local machine, open a web browser and navigate to http://localhost:8080 to access the bank ledger application.
 
 ## Design considerations
 *Replace this: I decided to build X for Y reasons.*
