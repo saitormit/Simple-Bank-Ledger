@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+//This controller contains all endpoints of this API
 @RestController
 public class TransactionController {
 
@@ -25,11 +26,13 @@ public class TransactionController {
         this.eventRepository = eventRepository;
     }
 
+    //Gets all the registered users and their information
     @GetMapping
     public List<User> showUsers(){
         return userRepository.getAllUsers();
     }
 
+    //Gets the history of all approved and declined transactions from all users
     @GetMapping("/events")
     public Map<String, List<Event>> getEventRecord(){
         return eventRepository.getEventRepository();

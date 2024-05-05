@@ -1,5 +1,6 @@
 package dev.codescreen.transaction;
 
+//Default error response schema when exception is found on the transaction service
 public class ErrorResponse {
     private String message;
     private String code;

@@ -1,5 +1,6 @@
 package dev.codescreen.transaction;
 
+//Schema to confirm the connection with the server by returning its current time
 public class PingRecord {
      private String serverTime;
 

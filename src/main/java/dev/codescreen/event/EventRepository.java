@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//EventRepository stores transaction events for each user
+//EventRepository stores transaction events for each user inside a hashmap, having the user's id as its key
 @Repository
 public class EventRepository {
     private final Map<String, List<Event>> eventRepository;

@@ -1,5 +1,6 @@
 package dev.codescreen.transaction;
 
+//This class' purpose is to parse the body of PUT requests
 public class TransactionRequest {
     public String userId;
     public String messageId;

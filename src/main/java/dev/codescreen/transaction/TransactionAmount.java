@@ -2,6 +2,7 @@ package dev.codescreen.transaction;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+//Class to organize transaction details meeting the schema provided
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TransactionAmount {
     public String amount;

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+//This class contains all the business logic to manage all the users' funds
 @Component
 public class TransactionService {
 
@@ -56,7 +57,7 @@ public class TransactionService {
                     transactionRequest.getMessageId(),
                     transactionRequest.getUserId(),
                     null,
-                    new Balance(
+                    new TransactionAmount(
                             Double.toString(user.getBalance()),
                             transactionRequest.getTransactionAmount().getCurrency(),
                             null

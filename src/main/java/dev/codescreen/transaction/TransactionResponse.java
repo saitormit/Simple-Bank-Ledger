@@ -2,14 +2,15 @@ package dev.codescreen.transaction;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+//This class' purpose is to define the response body of the PUT requests
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TransactionResponse {
     public String messageId;
     public String userId;
     public ResponseCode responseCode;
-    public Balance balance;
+    public TransactionAmount balance; //named balance to match the schema
 
-    public TransactionResponse(String messageId, String userId, ResponseCode responseCode, Balance balance) {
+    public TransactionResponse(String messageId, String userId, ResponseCode responseCode, TransactionAmount balance) {
         this.messageId = messageId;
         this.userId = userId;
         this.responseCode = responseCode;
@@ -40,11 +41,11 @@ public class TransactionResponse {
         this.responseCode = responseCode;
     }
 
-    public Balance getBalance() {
+    public TransactionAmount getBalance() {
         return balance;
     }
 
-    public void setBalance(Balance balance) {
+    public void setBalance(TransactionAmount balance) {
         this.balance = balance;
     }
 }

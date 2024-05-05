@@ -1,5 +1,6 @@
 package dev.codescreen.user;
 
+//Definition of the user class
 public class User {
     private String name;
     private String id;

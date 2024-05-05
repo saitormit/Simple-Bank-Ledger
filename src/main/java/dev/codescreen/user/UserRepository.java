@@ -2,10 +2,10 @@ package dev.codescreen.user;
 
 import org.springframework.stereotype.Repository;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
+//Class to define the preset of all users registered to the transaction service
 @Repository
 public class UserRepository {
     private final List<User> userList;
