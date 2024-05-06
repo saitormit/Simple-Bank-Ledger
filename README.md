@@ -66,6 +66,35 @@ As the service is supposed to run on a local machine, use Postman or open a web 
 ## Usage
 The application contains the use cases mentioned in the problem statement following the schemas given in the service.yml file. In order to make use of the service, the following API endpoints are exposed by the application.
 
+By setting up the proper http request body as it will be shown below, for each load and authorization calls made, the transaction event will be saved, regardless it was approved or declined.
+In order to retrieve that record of transactions, http://localhost:8080/events should be reached. For convenience purposes, it is highly recommended to use Postman to operate the API calls.
+
+It is also important to mention that the service starts with a preset of four users as it follows:
+```JSON
+[
+    {
+        "name": "Person A",
+        "id": "1",
+        "balance": 0.0
+    },
+    {
+        "name": "Person B",
+        "id": "2",
+        "balance": 0.0
+    },
+    {
+        "name": "Person C",
+        "id": "3",
+        "balance": 0.0
+    },
+    {
+        "name": "Person D",
+        "id": "4",
+        "balance": 350.0
+    }
+]
+```
+
 ### API Endpoints
 
 * #### GET /ping
@@ -220,11 +249,12 @@ The project tree is divided into five main components:
 It is important to emphasize that considering the scope of this challenge, the security layer was neglected. Therefore,
 no attention was put into authentication mechanisms. 
 Moreover, as a simplification purpose, no database was utilized. Instead, only in-memory objects were created so that it could mimic the data storage and its CRUD operations.
-This service contains a preset of 4 users of arbitrary id's and balances, that opt to withdraw and deposit some amount of money randomly.
+This service contains a preset of 4 users of arbitrary id's and balances, that opt to withdraw and deposit some amount of money randomly. Given the sample_tests file of this
+take home assignment, the balance of 3 users were set to 0 USD. Please go to *UserRepository.java* file to change the preset user configuration.
 
 Performance, transaction rollbacks, currency conversion, are also another areas that were not taken into consideration, as the main focus of this solution was to represent event sourcing reproduction.
 ## Bonus: Deployment considerations
-Some potential options for deployment of this application would be using the server of the company who owns this software, as it would be possible to have full control of its infrastructure, security, and maintenance. 
+Assuming a production scenario where clients sensitive information are present, some potential options for deployment of this application would be using the server of the company who owns this software, as it would be possible to have full control of its infrastructure, security, and maintenance. 
 ## License
 
 At CodeScreen, we strongly value the integrity and privacy of our assessments. As a result, this repository is under exclusive copyright, which means you **do not** have permission to share your solution to this test publicly (i.e., inside a public GitHub/GitLab repo, on Reddit, etc.). <br>

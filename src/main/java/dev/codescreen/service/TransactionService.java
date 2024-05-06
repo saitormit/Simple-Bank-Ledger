@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -54,7 +55,7 @@ public class TransactionService {
                     transactionRequest.getUserId(),
                     null,
                     new TransactionAmount(
-                            Double.toString(user.getBalance()),
+                            String.format("%.2f", user.getBalance()),
                             transactionRequest.getTransactionAmount().getCurrency(),
                             null
                     )
@@ -70,7 +71,7 @@ public class TransactionService {
                     //Update the user's balance in the in-memory object
                     user.setBalance(netBalance);
                     transactionResponse.setResponseCode(ResponseCode.APPROVED);
-                    transactionResponse.getBalance().setAmount(Double.toString(netBalance));
+                    transactionResponse.getBalance().setAmount(String.format("%.2f", netBalance));
 
                     //Saving the authorization approval into event repository
                     eventRepository.addEventToRepository(transactionRequest.getUserId(), new AuthorizationApprovedEvent(
@@ -96,7 +97,7 @@ public class TransactionService {
 
                 double netBalance = user.getBalance() + Double.parseDouble(transactionRequest.getTransactionAmount().getAmount());
                 user.setBalance(netBalance);
-                transactionResponse.getBalance().setAmount(Double.toString(netBalance));
+                transactionResponse.getBalance().setAmount(String.format("%.2f", netBalance));
 
                 //Saving load process into event repository
                 eventRepository.addEventToRepository(transactionRequest.getUserId(), new LoadEvent(

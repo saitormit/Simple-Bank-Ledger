@@ -14,10 +14,10 @@ public class UserRepository {
 
     public UserRepository(){
         this.userList = new ArrayList<>();
-        userList.add(new User("Person A", "1", 2000.00));
-        userList.add(new User("Person B", "2", 4000.00));
-        userList.add(new User("Person C", "3", 1000.00));
-        userList.add(new User("Person D", "4", 0.00));
+        userList.add(new User("Person A", "1", 0.00));
+        userList.add(new User("Person B", "2", 0.00));
+        userList.add(new User("Person C", "3", 0.00));
+        userList.add(new User("Person D", "4", 350.00));
     }
 
     public List<User> getAllUsers(){
