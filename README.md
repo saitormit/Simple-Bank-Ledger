@@ -80,7 +80,7 @@ The application contains the use cases mentioned in the problem statement follow
 
 * #### PUT /authorization
     * Description: removes funds from the user's balance if there's enough funds
-    * Request Body:
+    * Request Body example:
       ```JSON
       {
       "messageId": "SomeMessageId",
@@ -92,7 +92,7 @@ The application contains the use cases mentioned in the problem statement follow
           }
       }
       ```
-    * Response Body:
+    * Response Body example:
       ```JSON
       {
       "messageId": "SomeMessageId",
@@ -108,7 +108,7 @@ The application contains the use cases mentioned in the problem statement follow
 
 * #### PUT /load
     * Description: adds funds to the user's balance
-    * Request Body:
+    * Request Body example:
       ```JSON
       {
       "messageId": "SomeMessageId",
@@ -120,7 +120,7 @@ The application contains the use cases mentioned in the problem statement follow
           }
       }
       ```
-    * Response Body:
+    * Response Body example:
       ```JSON
       {
       "messageId": "SomeMessageId",
@@ -136,8 +136,8 @@ The application contains the use cases mentioned in the problem statement follow
 
 * #### GET /
     * Description: gets a list of all users and their current balance
-    * Request Body: N/A
-    * Response Body:
+    * Request Body example: N/A
+    * Response Body example:
       ```JSON
       [
       {
@@ -160,8 +160,8 @@ The application contains the use cases mentioned in the problem statement follow
 
 * #### GET /{id}
     * Description: gets the current balance of a user of a specific id
-    * Request Body: N/A
-    * Response Body:
+    * Request Body example: N/A
+    * Response Body example:
       ```JSON
       {
        "name": "Person B",
@@ -172,8 +172,8 @@ The application contains the use cases mentioned in the problem statement follow
 
 * #### GET /events
   * Description: gets the history of all "load" and "authorization" requests made while the service is running 
-  * Request Body: N/A
-  * Response Body:
+  * Request Body example: N/A
+  * Response Body example:
     ```JSON
     {
     "1": [
