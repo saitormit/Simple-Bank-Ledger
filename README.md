@@ -27,8 +27,8 @@ in order to get the bank ledger Spring Boot application up and running, follow t
 #### 1. Clone the repository
 ``git clone https://github.com/saitormit/Simple-Bank-Ledger.git``
 
-#### 2. Navigate to Project Directory (CodeScreen_q8psexpb)
-``cd CodeScreen_q8psexpb``
+#### 2. Navigate to Project Directory (Simple Bank Ledger)
+``cd Simple Bank Ledger``
 
 #### 3. Build the Application using Maven
 ``mvn clean package``
