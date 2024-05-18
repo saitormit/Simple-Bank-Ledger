@@ -1,4 +1,4 @@
-package dev.codescreen.model;
+package dev.bankledger.model;
 
 //Default error response schema when exception is found on the transaction service
 public class ErrorResponse {

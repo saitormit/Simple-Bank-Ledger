@@ -1,4 +1,4 @@
-package dev.codescreen.model;
+package dev.bankledger.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,9 +1,9 @@
-package dev.codescreen.model;
+package dev.bankledger.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-//Event when the user has enough balance and authorization process is approved
-public class AuthorizationApprovedEvent extends Event{
+//Event when the user has its balance loaded
+public class LoadEvent extends Event{
     @JsonProperty
     private String transactionType;
 
@@ -13,9 +13,9 @@ public class AuthorizationApprovedEvent extends Event{
     @JsonProperty
     private ResponseCode responseCode;
 
-    public AuthorizationApprovedEvent(String userId, String transactionId, TransactionAmount transactionAmount) {
+    public LoadEvent(String userId, String transactionId, TransactionAmount transactionAmount) {
         super(userId, transactionId);
-        this.transactionType = "authorization";
+        this.transactionType = "load";
         this.amount = transactionAmount.getAmount();
         this.responseCode = ResponseCode.APPROVED;
     }

@@ -1,15 +1,14 @@
-package dev.codescreen.service;
+package dev.bankledger.service;
 
-import dev.codescreen.model.*;
-import dev.codescreen.model.User;
-import dev.codescreen.exception.UserNotFoundException;
-import dev.codescreen.repository.EventRepository;
-import dev.codescreen.repository.UserRepository;
+import dev.bankledger.model.*;
+import dev.bankledger.model.User;
+import dev.bankledger.exception.UserNotFoundException;
+import dev.bankledger.repository.EventRepository;
+import dev.bankledger.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

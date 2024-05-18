@@ -1,7 +1,7 @@
-package dev.codescreen.repository;
+package dev.bankledger.repository;
 
-import dev.codescreen.exception.UserNotFoundException;
-import dev.codescreen.model.User;
+import dev.bankledger.exception.UserNotFoundException;
+import dev.bankledger.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

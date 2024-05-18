@@ -1,11 +1,11 @@
-package dev.codescreen.controller;
+package dev.bankledger.controller;
 
-import dev.codescreen.model.Event;
-import dev.codescreen.repository.EventRepository;
-import dev.codescreen.model.TransactionRequest;
-import dev.codescreen.service.TransactionService;
-import dev.codescreen.model.User;
-import dev.codescreen.repository.UserRepository;
+import dev.bankledger.model.Event;
+import dev.bankledger.repository.EventRepository;
+import dev.bankledger.model.TransactionRequest;
+import dev.bankledger.service.TransactionService;
+import dev.bankledger.model.User;
+import dev.bankledger.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

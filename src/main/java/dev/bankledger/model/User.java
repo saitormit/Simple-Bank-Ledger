@@ -1,4 +1,4 @@
-package dev.codescreen.model;
+package dev.bankledger.model;
 
 //Definition of the user class
 public class User {

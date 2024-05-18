@@ -1,4 +1,4 @@
-package dev.codescreen.model;
+package dev.bankledger.model;
 
 public enum ResponseCode {
     //Flag that indicates transaction approval

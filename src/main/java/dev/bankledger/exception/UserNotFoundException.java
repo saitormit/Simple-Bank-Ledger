@@ -1,4 +1,4 @@
-package dev.codescreen.exception;
+package dev.bankledger.exception;
 
 public class UserNotFoundException extends RuntimeException{
     public UserNotFoundException(String message) {

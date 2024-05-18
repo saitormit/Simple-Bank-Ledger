@@ -1,9 +1,9 @@
-package dev.codescreen;
+package dev.bankledger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.codescreen.model.DebitOrCredit;
-import dev.codescreen.model.TransactionAmount;
-import dev.codescreen.model.TransactionRequest;
+import dev.bankledger.model.DebitOrCredit;
+import dev.bankledger.model.TransactionAmount;
+import dev.bankledger.model.TransactionRequest;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

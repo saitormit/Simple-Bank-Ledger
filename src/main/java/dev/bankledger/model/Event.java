@@ -1,4 +1,4 @@
-package dev.codescreen.model;
+package dev.bankledger.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

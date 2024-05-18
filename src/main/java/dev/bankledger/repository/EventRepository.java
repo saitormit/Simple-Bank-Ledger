@@ -1,6 +1,6 @@
-package dev.codescreen.repository;
+package dev.bankledger.repository;
 
-import dev.codescreen.model.Event;
+import dev.bankledger.model.Event;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

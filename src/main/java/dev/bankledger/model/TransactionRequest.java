@@ -1,4 +1,4 @@
-package dev.codescreen.model;
+package dev.bankledger.model;
 
 //This class' purpose is to parse the body of PUT requests
 public class TransactionRequest {
