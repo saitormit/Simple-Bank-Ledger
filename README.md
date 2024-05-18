@@ -17,6 +17,7 @@ Every load or authorization PUT should return the updated balance following the 
 
 Event sourcing pattern is implemented to record all banking transactions as immutable events. Each event should capture relevant information such as transaction type, amount, timestamp, and account identifier.
 
+
 ## Bootstrap instructions
 This bank ledger system was developed by relying on Spring Boot framework. As a prerequisite to set up and install this application on the machine, *Java Development Kit (JDK) 8+* version is needed. In addition, we are also assuming whoever is cloning this program have Git and Maven already installed.
 
@@ -228,14 +229,5 @@ This service contains a preset of 4 users of arbitrary id's and balances, that o
 take home assignment, the balance of 3 users were set to 0 USD. Please go to *UserRepository.java* file to change the preset user configuration.
 
 Performance, transaction rollbacks, currency conversion, are also another areas that were not taken into consideration, as the main focus of this solution was to represent event sourcing reproduction.
-## Bonus: Deployment considerations
+## Deployment considerations
 Assuming a production scenario where clients sensitive information are present, some potential options for deployment of this application would be using the server of the company who owns this software, as it would be possible to have full control of its infrastructure, security, and maintenance. 
-## License
-
-At CodeScreen, we strongly value the integrity and privacy of our assessments. As a result, this repository is under exclusive copyright, which means you **do not** have permission to share your solution to this test publicly (i.e., inside a public GitHub/GitLab repo, on Reddit, etc.). <br>
-
-## Submitting your solution
-
-Please push your changes to the `main branch` of this repository. You can push one or more commits. <br>
-
-Once you are finished with the task, please click the `Submit Solution` link on <a href="https://app.codescreen.com/candidate/298e6560-4c9d-415b-86be-385621ed183e" target="_blank">this screen</a>.
