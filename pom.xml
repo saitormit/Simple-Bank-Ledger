@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.codescreen</groupId>
-    <artifactId>CodeScreen_q8psexpb</artifactId>
+    <artifactId>Simple_Bank_Ledger</artifactId>
     <version>1.0.0</version>
 
     <parent>
