@@ -21,11 +21,11 @@ Event sourcing pattern is implemented to record all banking transactions as immu
 ## Bootstrap instructions
 This bank ledger system was developed by relying on Spring Boot framework. As a prerequisite to set up and install this application on the machine, *Java Development Kit (JDK) 8+* version is needed. In addition, we are also assuming whoever is cloning this program have Git and Maven already installed.
 
-The service can be initialized by running the **src/main/java/dev/codescreen/TransactionApplication.java** on an IDE (e.g. IntelliJ). Considering a production environment and setting,
+The service can be initialized by running the **src/main/java/dev/bankledger/TransactionApplication.java** on an IDE (e.g. IntelliJ). Considering a production environment and setting,
 in order to get the bank ledger Spring Boot application up and running, follow the next steps:
 
 #### 1. Clone the repository
-``git clone https://github.com/codescreen/CodeScreen_q8psexpb.git``
+``git clone https://github.com/saitormit/Simple-Bank-Ledger.git``
 
 #### 2. Navigate to Project Directory (CodeScreen_q8psexpb)
 ``cd CodeScreen_q8psexpb``
